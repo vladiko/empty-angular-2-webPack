@@ -9,16 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styles: [`
   `],
   template: `
-    <h1>About</h1>
-    <div>
-      For hot module reloading run
-      <pre>npm run start:hmr</pre>
-    </div>
-    <div>
-      <h3>
-        patrick@AngularClass.com
-      </h3>
-    </div>
+    <h1>About</h1>   
+    <vladi></vladi>
     <pre>this.localState = {{ localState | json }}</pre>
   `
 })
@@ -27,7 +19,7 @@ export class AboutComponent implements OnInit {
   public localState: any;
   constructor(
     public route: ActivatedRoute
-  ) {}
+  ) { }
 
   public ngOnInit() {
     this.route
