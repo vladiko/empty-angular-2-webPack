@@ -9,10 +9,24 @@ import { ActivatedRoute } from '@angular/router';
     selector: 'vladi',
     template: `
     <h1>Hello from vladi</h1>    
+    <div>
+    <button (click)="click($event)">click me</button>    
+    </div>
+    <div><input [(ngModel)]="textFromInput" /></div>
+    <div><span>last click text: </span> {{lastTimeText}}</div>
+    <div><span> test from input: </span> {{textFromInput}}</div>
+
   `
 })
 export class VladiComponent implements OnInit {
     public localState: any;
+
+
+    private textFromInput: string = '';
+
+    private lastTimeText: string = '';
+
+
 
     constructor(public route: ActivatedRoute) { }
     public ngOnInit(): void {
@@ -25,6 +39,12 @@ export class VladiComponent implements OnInit {
                 this.localState = data.yourData;
             });
     }
+
+    public click(a) {
+        this.lastTimeText = this.textFromInput;
+    }
+
+
 
 
 
