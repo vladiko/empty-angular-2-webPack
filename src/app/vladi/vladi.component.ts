@@ -22,11 +22,9 @@ export class VladiComponent implements OnInit {
     public localState: any;
 
 
-    private textFromInput: string = '';
+    public textFromInput: string = '';
 
-    private lastTimeText: string = '';
-
-
+    public lastTimeText: string = '';
 
     constructor(public route: ActivatedRoute) { }
     public ngOnInit(): void {
@@ -43,9 +41,4 @@ export class VladiComponent implements OnInit {
     public click(a) {
         this.lastTimeText = this.textFromInput;
     }
-
-
-
-
-
 }

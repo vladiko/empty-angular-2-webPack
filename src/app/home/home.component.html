@@ -11,14 +11,12 @@
   <hr>
 
   <div>
+    <h2> {{title.value}}</h2>
     <h4>Local State</h4>
 
     <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
 
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
+      <input [value]="localState.value" (input)="localState.value = $event.target.value" placeholder="Submit Local State to App State"
         autofocus>
 
       <button>Submit Value</button>
